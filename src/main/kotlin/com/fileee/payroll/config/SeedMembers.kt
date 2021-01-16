@@ -10,14 +10,39 @@ import org.springframework.context.annotation.Configuration
 @Configuration
 class SeedMembers {
     @Bean
-    fun seedMemebers(memebersRepository: MembersRepository) = ApplicationRunner {
-        memebersRepository.save(Member(
-                name = "Arne",
-                payrollType = PayrollType.Monthly
-        ))
-        memebersRepository.save(Member(
+    fun seedMembersOperation(membersRepository: MembersRepository) = ApplicationRunner {
+        addMonthlyMemberHelper(membersRepository, "Arne")
+        addMonthlyMemberHelper(membersRepository, "Marius")
+        addMonthlyMemberHelper(membersRepository, "Eike")
+        addMonthlyMemberHelper(membersRepository, "Rahel")
+        addMonthlyMemberHelper(membersRepository, "Laura")
+        addMonthlyMemberHelper(membersRepository, "Florian")
+        addMonthlyMemberHelper(membersRepository, "Tom")
+        addMonthlyMemberHelper(membersRepository, "Benni")
+        addMonthlyMemberHelper(membersRepository, "Jasmin")
+        addMonthlyMemberHelper(membersRepository, "Alina")
+        addMonthlyMemberHelper(membersRepository, "Niklas")
+        addMonthlyMemberHelper(membersRepository, "Steffen")
+        addMonthlyMemberHelper(membersRepository, "Henning")
+        addMonthlyMemberHelper(membersRepository, "Benji")
+        addMonthlyMemberHelper(membersRepository, "Suneel")
+        addMonthlyMemberHelper(membersRepository, "Daniel")
+        addMonthlyMemberHelper(membersRepository, "Jasmin")
+        addMonthlyMemberHelper(membersRepository, "Sebastian")
+        addMonthlyMemberHelper(membersRepository, "Meggy")
+        addMonthlyMemberHelper(membersRepository, "Pascal")
+        addMonthlyMemberHelper(membersRepository, "Manu")
+        addMonthlyMemberHelper(membersRepository, "Dhala")
+
+        membersRepository.save(Member(
                 name = "Rabieh",
                 payrollType = PayrollType.Hourly
+        ))
+    }
+    fun addMonthlyMemberHelper(membersRepository:MembersRepository, name:String){
+        membersRepository.save(Member(
+                name = name,
+                payrollType = PayrollType.Monthly
         ))
     }
 }
