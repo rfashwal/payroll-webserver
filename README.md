@@ -22,10 +22,10 @@ Spring Boot offers a fast way to build applications. It looks at your classpath 
 #### Payroll Calculator
 An interface that contains a calculate method and has two concrete implementations for Fixed and Monthly Members
 
-![CalculatorDiagram](https://github.com/rfashwal/payroll-webserver/blob/master/images/calculatorDiagram.png)
+![CalculatorDiagram](https://github.com/rfashwal/payroll-webserver/blob/main/images/calculatorDiagram.png)
 
 #### Main Entities 
-![Entities](https://github.com/rfashwal/payroll-webserver/blob/master/images/entities.png)
+![Entities](https://github.com/rfashwal/payroll-webserver/blob/main/images/entities.png)
 
 #### Endpoints
   
@@ -50,7 +50,7 @@ Run the app and access via: http://localhost:8080/swagger-ui.html
     - GET /api/logiceee/starrings/{value}: a recursive method where identical chars that are adjacent in the original string will be separated by a "*".
     - GET /api/logiceee/verify/{email}:a method that accepts a string and checks if this is a valid email address
 
-![swagger](https://github.com/rfashwal/payroll-webserver/blob/master/images/swagger.png)
+![swagger](https://github.com/rfashwal/payroll-webserver/blob/main/images/swagger.png)
 
 #### Build 
 Used maven as package manager
