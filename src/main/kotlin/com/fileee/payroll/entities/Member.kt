@@ -4,7 +4,8 @@ import javax.persistence.*
 
 @Entity
 class Member(
-     var name: String,
-     var payrollType : PayrollType,
-    @Id @GeneratedValue var id: Long = 0
+        var name: String,
+        var payrollType: PayrollType,
+        var wage: Double,
+        @Id @GeneratedValue var id: Long = 0
 )

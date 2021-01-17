@@ -36,13 +36,16 @@ class SeedMembers {
 
         membersRepository.save(Member(
                 name = "Rabieh",
-                payrollType = PayrollType.Hourly
+                payrollType = PayrollType.Hourly,
+                wage = 40.0,
         ))
     }
-    fun addMonthlyMemberHelper(membersRepository:MembersRepository, name:String){
+
+    fun addMonthlyMemberHelper(membersRepository: MembersRepository, name: String) {
         membersRepository.save(Member(
                 name = name,
-                payrollType = PayrollType.Monthly
+                payrollType = PayrollType.Monthly,
+                wage = 2500.0
         ))
     }
 }

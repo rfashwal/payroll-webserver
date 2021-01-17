@@ -35,7 +35,7 @@ class MembersService(private val repository: MembersRepository) {
 
     fun get(id: Long): ResponseEntity<Member> {
         return repository.findById(id).map { m -> ResponseEntity.ok().body(m) }.orElseThrow {
-            ResourceNotFoundException("member doesn't exist")
+            ResourceNotFoundException("Member doesn't exist : $id")
         }
     }
 
